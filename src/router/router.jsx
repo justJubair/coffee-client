@@ -3,6 +3,8 @@ import { default as Root } from "../Root/Root";
 import AddCoffee from "../pages/AddCoffee/AddCoffee";
 import UpdateCoffee from "../pages/UpdateCoffee/UpdateCoffee";
 import Home from "../pages/Home/Home";
+import Users from "../pages/Users/Users";
+import Register from "../pages/Register/Register";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
                 path: "/updateCoffee/:id",
                 element: <UpdateCoffee/>,
                 loader: ({params})=> fetch(`http://localhost:5000/coffees/${params.id}`)
+            },
+            {
+                path: "/users",
+                element: <Users/>
+            },
+            {
+                path: "/register",
+                element: <Register/>
             }
         ]
     }
