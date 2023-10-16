@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                loader: ()=> fetch("http://localhost:5000/coffees"),
+                loader: ()=> fetch("https://coffee-server-qtja0mdj9-jubair-ahmeds-projects.vercel.app/coffees"),
                 element: <Home/>
             },
             {
@@ -25,11 +25,11 @@ const router = createBrowserRouter([
             {
                 path: "/updateCoffee/:id",
                 element: <UpdateCoffee/>,
-                loader: ({params})=> fetch(`http://localhost:5000/coffees/${params.id}`)
+                loader: ({params})=> fetch(`https://coffee-server-qtja0mdj9-jubair-ahmeds-projects.vercel.app/coffees/${params.id}`)
             },
             {
                 path: "/users",
-                loader: ()=> fetch("http://localhost:5000/users"),
+                loader: ()=> fetch("https://coffee-server-qtja0mdj9-jubair-ahmeds-projects.vercel.app/users"),
                 element: <Users/>
             },
             {
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/updateUser/:id",
-                loader: ({params})=> fetch(`http://localhost:5000/users/${params.id}`),
+                loader: ({params})=> fetch(`https://coffee-server-qtja0mdj9-jubair-ahmeds-projects.vercel.app/users/${params.id}`),
                 element: <UpdateUser/>
             }
         ]

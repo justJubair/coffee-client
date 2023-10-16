@@ -13,7 +13,7 @@ const UpdateUser = () => {
     const password = form.password.value;
     const updatedUser = {name, email, password, gender:radioValue}
     
-    fetch(`http://localhost:5000/users/${user._id}`, {
+    fetch(`https://coffee-server-qtja0mdj9-jubair-ahmeds-projects.vercel.app/users/${user._id}`, {
       method: "PUT",
       headers : {
         "content-type": "application/json"
@@ -93,7 +93,7 @@ const UpdateUser = () => {
                 placeholder="password"
                 name="password"
                 className="input input-bordered"
-                defaultValue={user.password}
+                defaultValue={user?.password}
                 
               />
             </div>
