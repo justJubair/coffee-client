@@ -29,7 +29,7 @@ const Home = () => {
         <h2 className="text-center my-5 font-bold">Total Coffee: {coffees.length}</h2>
         <div className="flex flex-wrap justify-center gap-6">
             {
-              coffees.map(coffee=> <CoffeeCard key={coffee._id} coffees={coffees} setCoffees={setCoffees} coffee={coffee}/>)
+              coffees?.map(coffee=> <CoffeeCard key={coffee._id} coffees={coffees} setCoffees={setCoffees} coffee={coffee}/>)
             }         
         </div>
       </div>
